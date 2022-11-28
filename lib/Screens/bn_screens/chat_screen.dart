@@ -14,12 +14,8 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Chat "),
-      ),
-
-      body: ListView.separated(
+    return
+ ListView.separated(
         
         
           itemBuilder: (context, index) {
@@ -41,7 +37,7 @@ class ChatScreen extends StatelessWidget {
               indent: 10,
             );
           },
-          itemCount: _names.length),
+          itemCount: _names.length);
 
       // body: ListView.builder(
       //   itemCount: 30,
@@ -66,6 +62,6 @@ class ChatScreen extends StatelessWidget {
       //     )
       //   ],
       // ),
-    );
+
   }
 }
