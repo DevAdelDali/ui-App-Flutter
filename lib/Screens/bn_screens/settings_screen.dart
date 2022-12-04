@@ -284,7 +284,12 @@ class _SetteingsScrrenState extends State<SetteingsScrren> {
         backgroundColor: Colors.red.shade600,
         padding: const EdgeInsets.all(30),
         elevation: 0,
-        content: const Text("Error Plase Enter ")));
+        width: 300,
+        behavior: SnackBarBehavior.floating,
+        content: Text(
+          "Error Plase Enter ",
+          style: GoogleFonts.adamina(fontSize: 15),
+        )));
     return false;
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moumen_app_ui/Screens/chat_massage.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:moumen_app_ui/Screens/bn_screens/chat_massage.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -24,8 +25,8 @@ class ChatScreen extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder:  (context) => const ChatMassage(),));
               },
               leading: const Icon(Icons.chat),
-              title: Text("${_names[index]  } : $index "),
-              subtitle: const Text("hallo..How are you?"),
+              title: Text("${_names[index]  } : $index ",style: GoogleFonts.adamina()),
+              subtitle:  Text("hallo..How are you?",style: GoogleFonts.adamina()),
             );
           },
           separatorBuilder: (context, index) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class luncher_APP extends StatefulWidget {
   const luncher_APP({Key? key}) : super(key: key);
@@ -14,9 +14,9 @@ class _luncher_APPState extends State<luncher_APP> {
     // TODO: implement initState
     super.initState();
     Future.delayed(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       () {
-        Navigator.pushReplacementNamed(context, "/Out_Boarding");
+        Navigator.pushReplacementNamed(context, "/BottomNavigationBarScreen");
       },
     );
   }
@@ -34,7 +34,14 @@ class _luncher_APPState extends State<luncher_APP> {
             Colors.blue.shade100,
           ],
         )),
-        child: Center(child: Text("UI APP",style: GoogleFonts.meriendaOne(fontSize: 20,color: Colors.black),)),
+        child: const Center(
+            child: Image(
+          image: AssetImage("images/logo.png"),
+          width: 180,
+          height: 180,
+        )
+            // Text("UI APP",style: GoogleFonts.meriendaOne(fontSize: 20,color: Colors.black),)
+            ),
       ),
     );
   }

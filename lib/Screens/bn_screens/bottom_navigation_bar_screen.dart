@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moumen_app_ui/Models/bn_screen.dart';
-import 'package:moumen_app_ui/Screens/chat_screen.dart';
-import 'package:moumen_app_ui/Screens/home_screen.dart';
-import 'package:moumen_app_ui/Screens/settings_screen.dart';
-import 'package:moumen_app_ui/Screens/users_screen.dart';
+import 'package:moumen_app_ui/Screens/bn_screens/chat_screen.dart';
+import 'package:moumen_app_ui/Screens/bn_screens/home_screen.dart';
+import 'package:moumen_app_ui/Screens/bn_screens/settings_screen.dart';
+import 'package:moumen_app_ui/Screens/bn_screens/users_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({Key? key}) : super(key: key);
@@ -62,11 +62,17 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
                         color: Colors.white,
                       ))
                 ],
-                accountName: const Text("Adel Saleh Dali"),
-                accountEmail: const Text("aldalyadelsalehdali2002@gmail.com")),
+                accountName:  Text("Adel Saleh Dali",style: GoogleFonts.adamina()),
+                accountEmail:  Text("aldalyadelsalehdali2002@gmail.com",style: GoogleFonts.adamina())),
             ListTile(
               onTap: () {
                 Navigator.pop(context);
+                Future.delayed(
+                  Duration(milliseconds: 400),
+                  () {
+                    Navigator.pushNamed(context, "/FAQ_Screen");
+                  },
+                );
               },
               leading: const Icon(Icons.question_answer),
               trailing: const Icon(Icons.arrow_forward_ios, size: 17),
@@ -123,7 +129,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         ),
       ),
       appBar: AppBar(
-          title: Text(_bnListScreens[_currentIndex].titel),
+          title: Text(_bnListScreens[_currentIndex].titel,style: GoogleFonts.adamina()),
           backgroundColor: _bnListScreens[_currentIndex].coloeAppBar),
       body: Center(
         child: _bnListScreens[_currentIndex].widgetBady,
@@ -161,7 +167,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
                 icon: const Icon(Icons.chat_outlined),
                 activeIcon: const Icon(Icons.chat),
                 backgroundColor: Colors.orange.shade100,
-                label: "Chats"),
+                label: "Chats"
+            ),
             BottomNavigationBarItem(
                 icon: const Icon(
                   Icons.settings_outlined,
