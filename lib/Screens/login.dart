@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moumen_app_ui/widgets/text_custom.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -190,44 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: TextField(
-                  controller: _emailControler,
-                  keyboardType: TextInputType.emailAddress,
-                  maxLines: null,
-                  minLines: null,
-                  expands: true,
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.zero,
-                    hintText: "ttastystile@gmail.com",
-                    constraints: BoxConstraints(maxHeight: _emailError==null ?50:70),
-                    hoverColor: Colors.pink,
-                    hintMaxLines: 1,
-                    focusColor: Colors.white,
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(width: 1, color: Colors.grey)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: const BorderSide(
-                            width: 1,
-                            color: Color(0xffFDDBDD),
-                            style: BorderStyle.solid)),
-                    errorText: _emailError,
-                    errorMaxLines: 1,
-                    errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          color: Colors.red.shade300,
-                          width: 1,
-                        )),
-                    focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          color: Colors.red.shade800,
-                          width: 1,
-                        )),
-                  ),
-                ),
+                child: TextCustom(emailControler: _emailControler, emailError: _emailError),
               ),
 
               ////////////////////////////////////////////////////
@@ -398,3 +362,5 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.pushReplacementNamed(context, "/BottomNavigationBarScreen");
   }
 }
+
+

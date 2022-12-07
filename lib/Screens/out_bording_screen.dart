@@ -66,32 +66,7 @@ class _Out_BordingState extends State<Out_Bording> {
               ),
             ),
 
-            // if (_courantIndexTabPageviwe != 2)
-            // Align(
-            //   heightFactor: 1.6,
-            //   alignment: AlignmentDirectional.bottomEnd,
-            //   child: TextButton(
-            //     onPressed: () {},
-            //     child: Text("SKIP",
-            //         style: GoogleFonts.poppins(
-            //           color: Colors.black,
-            //           fontSize: 20,
-            //         )),
-            //   ),
-            // ),
-            // if (_courantIndexTabPageviwe == 2)
-            //   Align(
-            //     heightFactor: 1.6,
-            //     alignment: AlignmentDirectional.bottomEnd,
-            //     child: TextButton(
-            //       onPressed: () {},
-            //       child: Text("START",
-            //           style: GoogleFonts.poppins(
-            //             color: Colors.black,
-            //             fontSize: 20,
-            //           )),
-            //     ),
-            //   ),
+
             Expanded(
               child: PageView(
                 controller: _counrolerPageView,
@@ -191,7 +166,8 @@ class _Out_BordingState extends State<Out_Bording> {
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       backgroundColor: const Color(0xffE24E59),
-                      minimumSize: const Size(323, 60)),
+                      minimumSize: const Size(323, 60)
+                  ),
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, "/login");
                   },
