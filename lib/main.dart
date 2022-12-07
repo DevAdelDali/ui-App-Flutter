@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:moumen_app_ui/Screens/Drawers/about_dev.dart';
 import 'package:moumen_app_ui/Screens/Drawers/faq_screen.dart';
+import 'package:moumen_app_ui/Screens/Drawers/favorit_screen.dart';
+import 'package:moumen_app_ui/Screens/Drawers/scand_faq_screen.dart';
+import 'package:moumen_app_ui/Screens/Tabs/first_tab.dart';
+import 'package:moumen_app_ui/Screens/Tabs/scand_tab.dart';
 import 'package:moumen_app_ui/Screens/bn_screens/bottom_navigation_bar_screen.dart';
 import 'package:moumen_app_ui/Screens/bn_screens/chat_screen.dart';
 import 'package:moumen_app_ui/Screens/bn_screens/users_screen.dart';
@@ -33,6 +38,11 @@ class MyApp extends StatelessWidget {
         "/HomeScreen":(context) => const HomeScreen(),
         "/BottomNavigationBarScreen":(context) => const BottomNavigationBarScreen(),
         "/FAQ_Screen":(context) => const FAQ_Screen(),
+        "/ScandFaq":(context) => const ScandFaq(),
+        "/FavoriteScreen":(context) => const FavoriteScreen(),
+        "/FirstTab":(context) => const FirstTab(),
+        "/ScandTab":(context) => const ScandTab(),
+        "/AboutDev":(context) => const AboutDev(),
         "/MySample":(context) =>  MySample(),
 
       },

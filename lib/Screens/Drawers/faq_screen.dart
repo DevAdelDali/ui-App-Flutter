@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moumen_app_ui/Models/faq.dart';
 
+// ignore: camel_case_types
 class FAQ_Screen extends StatefulWidget {
   const FAQ_Screen({Key? key}) : super(key: key);
 
   @override
   State<FAQ_Screen> createState() => _FAQ_ScreenState();
 }
+// ignore: camel_case_types
+class  _FAQ_ScreenState extends State<FAQ_Screen> {
 
-class _FAQ_ScreenState extends State<FAQ_Screen> {
+
   final List<Faq> _faqList = <Faq>[
     Faq(questionTitel: "Dart is originally developed by?", answer: "Google"),
     Faq(
@@ -40,7 +43,7 @@ class _FAQ_ScreenState extends State<FAQ_Screen> {
           scrollDirection: Axis.vertical,
             padding: const EdgeInsets.all(10), children: [
   ConstrainedBox(
-    constraints: BoxConstraints(
+    constraints:const  BoxConstraints(
       maxWidth: 300,
 
     ),
@@ -79,7 +82,7 @@ class _FAQ_ScreenState extends State<FAQ_Screen> {
                     );
                   },
                   body: Container(
-                    padding: EdgeInsetsDirectional.only(bottom: 15, start: 35),
+                    padding: const EdgeInsetsDirectional.only(bottom: 15, start: 35),
                     child: ConstrainedBox(
                       constraints:const BoxConstraints(
                         maxWidth:450

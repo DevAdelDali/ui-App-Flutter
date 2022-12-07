@@ -70,7 +70,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
                 Future.delayed(
                   Duration(milliseconds: 400),
                   () {
-                    Navigator.pushNamed(context, "/FAQ_Screen");
+                    Navigator.pushNamed(context, "/ScandFaq");
                   },
                 );
               },
@@ -83,15 +83,27 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
             ListTile(
               onTap: () {
                 Navigator.pop(context);
+                Future.delayed(
+                  Duration(milliseconds: 400),
+                      () {
+                    Navigator.pushNamed(context, "/FavoriteScreen");
+                  },
+                );
               },
-              leading: const Icon(Icons.group),
+              leading: const Icon(Icons.favorite),
               trailing: const Icon(Icons.arrow_forward_ios, size: 17),
-              title: Text("Team ", style: GoogleFonts.adamina()),
-              subtitle: Text("Devlopment Team", style: GoogleFonts.adamina()),
+              title: Text("Favorite ", style: GoogleFonts.adamina()),
+              subtitle: Text("Favorite Screen", style: GoogleFonts.adamina()),
+
             ),
             ListTile(
               onTap: () {
                 Navigator.pop(context);
+                Future.delayed(Duration(milliseconds: 300),(){
+                  Navigator.pushNamed(context, "/AboutDev");
+
+
+                });
               },
               leading: const Icon(Icons.developer_mode),
               trailing: const Icon(Icons.arrow_forward_ios, size: 17),

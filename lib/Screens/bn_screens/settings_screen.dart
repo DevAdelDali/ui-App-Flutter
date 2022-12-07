@@ -230,7 +230,7 @@ class _SetteingsScrrenState extends State<SetteingsScrren> {
               hintText: "Enter Your Experience"),
         ),
         Wrap(
-          spacing: 10,
+          spacing:  10,
           children: _listExperience
               .map((e) => Chip(
                   labelStyle: GoogleFonts.adamina(),
